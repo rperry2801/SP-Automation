@@ -1,12 +1,10 @@
-# don't forget to use pip to install the PDF module
-# python3 -m pip show PyPDF2 
+# Install FPDF via pip: "py -m pip install FPDF"
+import fpdf
+from fpdf import FPDF
 
-import PyPDF2
-from PyPDF2 import *
-from PyPDF2 import PdfFileWriter, PdfFileReader
-from pathlib import path
+# First all the data we write needs to go to a text file we create that here
+text = open("WriteTo.txt", "a")
+text.write("This is where all the data will go!")
+text.close()
 
-pdf_path = (
-  Path.home()
-  # enter sharedrive path here
-)
+pdf = FPDF() # creates PDF object we can use to edit the PDF with text from the WriteTo.txt
