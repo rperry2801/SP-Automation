@@ -6,6 +6,7 @@ class RunMain:
     print("Nothing here yet")
 
 Main = RunMain()
+
 Window = Tk()
-Window.mainloop()
 Window.title("CTO Filler")
+Window.mainloop()
