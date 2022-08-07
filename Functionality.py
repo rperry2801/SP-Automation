@@ -7,4 +7,11 @@ text = open("WriteTo.txt", "a")
 text.write("This is where all the data will go!")
 text.close()
 
-pdf = FPDF() # creates PDF object we can use to edit the PDF with text from the WriteTo.txt
+class PDF(FPDF):
+  def positionText(self):
+    # self.cell()
+    # whatever code is needed to ensure text will be placed in the right part of the form
+
+print(text.read())
+pdf = PDF()
+pdf.positionText()
